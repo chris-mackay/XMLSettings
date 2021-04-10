@@ -4,9 +4,8 @@ A simple class for storing user settings in XML for a .NET application
 ## Implementation
 
 ```csharp
-//---------------------------------------------------------
-
 // Specify settings and default values
+//---------------------------------------------------------
 
 StringCollection settings = new StringCollection();
 
