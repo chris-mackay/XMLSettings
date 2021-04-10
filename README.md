@@ -21,4 +21,10 @@ XMLSettings.InitializeSettings(settings); // Create file and set default values
 
 textBox1.Text = XMLSettings.GetSettingsValue("DefaultString");
 checkBox1.Checked = bool.Parse(XMLSettings.GetSettingsValue("DefaultChecked"));
+
+// Set settings values
+
+XMLSettings.SetSettingsValue("DefaultString,TheNewValue");
+XMLSettings.SetSettingsValue("DefaultChecked,False");
+
 ```
