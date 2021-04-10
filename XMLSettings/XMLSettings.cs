@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using System.IO;
 using System.Xml;
 
 public static class XMLSettings
 {
-    public static string AppSettingsFile = "";
+    public static string AppSettingsFile;
 
     private static bool SettingsFileExists()
     {
@@ -25,7 +24,7 @@ public static class XMLSettings
         doc.Load(AppSettingsFile);
 
         XmlNode node = null;
-        node = doc.SelectSingleNode(_Field);
+        node = doc.SelectSingleNode("//Settings/" + _Field);
 
         string value = string.Empty;
 
@@ -41,6 +40,8 @@ public static class XMLSettings
     {
         XmlDocument doc = new XmlDocument();
         doc.Load(AppSettingsFile);
+
+        _Field = "//Settings/" + _Field;
 
         if (doc.SelectSingleNode(_Field) == null)
         {
@@ -125,12 +126,6 @@ public static class XMLSettings
                 }
             }
         }
-    }
-
-    public sealed class ApplicationSettings
-    {
-        // General
-        public const string DrawingDirectory = "//Settings/DrawingDirectory";
     }
 }
 

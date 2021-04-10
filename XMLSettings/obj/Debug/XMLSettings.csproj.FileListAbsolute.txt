@@ -4,3 +4,9 @@ C:\Programming\XMLSettings\XMLSettings\XMLSettings\obj\Debug\XMLSettings.csprojA
 C:\Programming\XMLSettings\XMLSettings\XMLSettings\obj\Debug\XMLSettings.csproj.CoreCompileInputs.cache
 C:\Programming\XMLSettings\XMLSettings\XMLSettings\obj\Debug\XMLSettings.dll
 C:\Programming\XMLSettings\XMLSettings\XMLSettings\obj\Debug\XMLSettings.pdb
+C:\Programming\XMLSettings\XMLSettings\bin\Debug\XMLSettings.dll
+C:\Programming\XMLSettings\XMLSettings\bin\Debug\XMLSettings.pdb
+C:\Programming\XMLSettings\XMLSettings\obj\Debug\XMLSettings.csprojAssemblyReference.cache
+C:\Programming\XMLSettings\XMLSettings\obj\Debug\XMLSettings.csproj.CoreCompileInputs.cache
+C:\Programming\XMLSettings\XMLSettings\obj\Debug\XMLSettings.dll
+C:\Programming\XMLSettings\XMLSettings\obj\Debug\XMLSettings.pdb
