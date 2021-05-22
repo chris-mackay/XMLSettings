@@ -9,7 +9,7 @@ A simple class for storing user settings in XML for a .NET application
 
 StringCollection settings = new StringCollection();
 
-settings.Add("DefaultString,CodeProject");
+settings.Add("DefaultString,MyString");
 settings.Add("DefaultChecked,True");
 
 XMLSettings.AppSettingsFile = "Settings.xml"; // Set the file path
