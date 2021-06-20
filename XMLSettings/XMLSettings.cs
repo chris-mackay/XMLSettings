@@ -99,12 +99,9 @@ public static class XMLSettings
             xmlDoc.Load(AppSettingsFile);
             XmlElement elm = xmlDoc.DocumentElement;
             XmlNodeList lstSettings = elm.ChildNodes;
-            StringCollection nodeNames = new StringCollection();
+            List<string> nodeNames = new List<string>();
 
-            foreach (XmlNode node in lstSettings)
-            {
-                nodeNames.Add(node.Name);
-            }
+            foreach (XmlNode node in lstSettings) nodeNames.Add(node.Name);
 
             foreach (KeyValuePair<string, string> entry in _AppSettings)
             {
