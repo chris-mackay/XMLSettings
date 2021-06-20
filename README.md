@@ -7,10 +7,10 @@ A simple class for storing user settings in XML for a .NET application
 // Specify settings and default values
 //---------------------------------------------------------
 
-StringCollection settings = new StringCollection();
+Dictionary<string, string> settings = new Dictionary<string, string>();
 
-settings.Add("DefaultString,MyString");
-settings.Add("DefaultChecked,True");
+settings.Add("DefaultString","MyString");
+settings.Add("DefaultChecked","True");
 
 XMLSettings.AppSettingsFile = "Settings.xml"; // Set the file path
 XMLSettings.InitializeSettings(settings); // Create file and set default values
