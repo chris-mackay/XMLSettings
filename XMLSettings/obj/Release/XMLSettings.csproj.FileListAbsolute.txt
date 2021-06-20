@@ -1,5 +1,0 @@
-C:\Programming\XMLSettings\XMLSettings\bin\Release\XMLSettings.dll
-C:\Programming\XMLSettings\XMLSettings\bin\Release\XMLSettings.pdb
-C:\Programming\XMLSettings\XMLSettings\obj\Release\XMLSettings.csproj.CoreCompileInputs.cache
-C:\Programming\XMLSettings\XMLSettings\obj\Release\XMLSettings.dll
-C:\Programming\XMLSettings\XMLSettings\obj\Release\XMLSettings.pdb

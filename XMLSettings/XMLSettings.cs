@@ -1,4 +1,4 @@
-﻿using System.Collections.Specialized;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 
@@ -60,7 +60,7 @@ public static class XMLSettings
         }
     }
 
-    public static void InitializeSettings(StringCollection _AppSettings)
+    public static void InitializeSettings(Dictionary<string,string> _AppSettings)
     {
         if (!SettingsFileExists())
         {
@@ -75,14 +75,11 @@ public static class XMLSettings
                 withBlock.WriteComment("Application Settings");
                 withBlock.WriteStartElement("Settings");
 
-                string[] arr;
-
-                foreach (string setting in _AppSettings)
+                foreach (KeyValuePair<string, string> entry in _AppSettings)
                 {
-                    arr = setting.Split(',');
 
-                    string settingName = arr[0];
-                    string defaultValue = arr[1];
+                    string settingName = entry.Key;
+                    string defaultValue = entry.Value;
 
                     withBlock.WriteStartElement(settingName);
                     withBlock.WriteString(defaultValue);
@@ -102,7 +99,6 @@ public static class XMLSettings
             xmlDoc.Load(AppSettingsFile);
             XmlElement elm = xmlDoc.DocumentElement;
             XmlNodeList lstSettings = elm.ChildNodes;
-            string[] arr;
             StringCollection nodeNames = new StringCollection();
 
             foreach (XmlNode node in lstSettings)
@@ -110,12 +106,10 @@ public static class XMLSettings
                 nodeNames.Add(node.Name);
             }
 
-            foreach (string setting in _AppSettings)
+            foreach (KeyValuePair<string, string> entry in _AppSettings)
             {
-                arr = setting.Split(',');
-
-                string settingName = arr[0];
-                string defaultValue = arr[1];
+                string settingName = entry.Key;
+                string defaultValue = entry.Value;
 
                 if (!nodeNames.Contains(settingName))
                 {
