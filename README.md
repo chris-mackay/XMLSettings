@@ -24,7 +24,7 @@ checkBox1.Checked = bool.Parse(XMLSettings.GetSettingsValue("DefaultChecked"));
 
 // Set settings values
 
-XMLSettings.SetSettingsValue("DefaultString,TheNewValue");
-XMLSettings.SetSettingsValue("DefaultChecked,False");
+XMLSettings.SetSettingsValue("DefaultString","TheNewValue");
+XMLSettings.SetSettingsValue("DefaultChecked","False");
 
 ```
